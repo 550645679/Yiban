@@ -16,18 +16,12 @@ namespace Yiban
 
         private void button1_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "17677059909";
-            textBox2.Text = "luoxinaini1314";
             string username = textBox1.Text;
             string password = RSAEncrypt(textBox2.Text);
-            //MessageBox.Show(password);
-            var atime = (DateTime.Now.ToUniversalTime().Ticks - 621355968000000000) / 10000000 - 15;
-            MessageBox.Show(atime.ToString());
-
+            var atime = (DateTime.Now.ToUniversalTime().Ticks - 621355968000000000) / 10000000;
             HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://www.yiban.cn/login/doLoginAjax");
             Encoding encoding = Encoding.UTF8;
             string param = "account=" + username + "&password=" + password + "&captcha=&keysTime=" + atime;
-            //encoding.GetBytes(postData);
             byte[] bs = Encoding.ASCII.GetBytes(param);
             string responseData = string.Empty;
             req.Method = "POST";
@@ -44,8 +38,9 @@ namespace Yiban
                 {
                     responseData = reader.ReadToEnd().ToString();
                 }
-                //context.Response.Write(responseData);
             }
+            MessageBox.Show(password);
+            MessageBox.Show(atime.ToString());
             MessageBox.Show(responseData);
         }
         public static string RSAEncrypt(string content)
@@ -65,7 +60,6 @@ namespace Yiban
             req.Method = "POST";
             req.ContentType = "application/x-www-form-urlencoded";
 
-            #region 添加Post 参数
             byte[] data = Encoding.UTF8.GetBytes(content);
             req.ContentLength = data.Length;
             using (Stream reqStream = req.GetRequestStream())
@@ -73,11 +67,9 @@ namespace Yiban
                 reqStream.Write(data, 0, data.Length);
                 reqStream.Close();
             }
-            #endregion
 
             HttpWebResponse resp = (HttpWebResponse)req.GetResponse();
             Stream stream = resp.GetResponseStream();
-            //获取响应内容
             using (StreamReader reader = new StreamReader(stream, Encoding.UTF8))
             {
                 result = reader.ReadToEnd();
