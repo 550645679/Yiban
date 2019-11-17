@@ -1,0 +1,9 @@
+C:\Users\luoxi\Documents\GitHub\Yiban\Windows\Yiban\Yiban\bin\Debug\Yiban.exe.config
+C:\Users\luoxi\Documents\GitHub\Yiban\Windows\Yiban\Yiban\bin\Debug\Yiban.exe
+C:\Users\luoxi\Documents\GitHub\Yiban\Windows\Yiban\Yiban\bin\Debug\Yiban.pdb
+C:\Users\luoxi\Documents\GitHub\Yiban\Windows\Yiban\Yiban\obj\Debug\Yiban.csprojAssemblyReference.cache
+C:\Users\luoxi\Documents\GitHub\Yiban\Windows\Yiban\Yiban\obj\Debug\Yiban.Form1.resources
+C:\Users\luoxi\Documents\GitHub\Yiban\Windows\Yiban\Yiban\obj\Debug\Yiban.Properties.Resources.resources
+C:\Users\luoxi\Documents\GitHub\Yiban\Windows\Yiban\Yiban\obj\Debug\Yiban.csproj.GenerateResource.cache
+C:\Users\luoxi\Documents\GitHub\Yiban\Windows\Yiban\Yiban\obj\Debug\Yiban.exe
+C:\Users\luoxi\Documents\GitHub\Yiban\Windows\Yiban\Yiban\obj\Debug\Yiban.pdb
