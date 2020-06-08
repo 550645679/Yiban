@@ -14,7 +14,7 @@ namespace Yiban
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             TimeSpan ts = DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0);
             string atime = Convert.ToInt64(ts.TotalSeconds).ToString() + "." + Convert.ToInt64(ts.TotalMilliseconds).ToString().Substring(10, 2);

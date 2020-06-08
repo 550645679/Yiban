@@ -60,7 +60,7 @@
             this.button1.Size = new System.Drawing.Size(100, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "Login";
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // txtCaptcha
             // 
