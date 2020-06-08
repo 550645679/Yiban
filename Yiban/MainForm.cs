@@ -16,12 +16,11 @@ namespace Yiban
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string username = textBox1.Text;
-            string password = RSAEncrypt(textBox2.Text);
-            var atime = (DateTime.Now.ToUniversalTime().Ticks - 621355968000000000 / 10000000);
+            TimeSpan ts = DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0);
+            string atime = Convert.ToInt64(ts.TotalSeconds).ToString() + "." + Convert.ToInt64(ts.TotalMilliseconds).ToString().Substring(10, 2);
             HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://www.yiban.cn/login/doLoginAjax");
             Encoding encoding = Encoding.UTF8;
-            string param = "account=" + username + "&password=" + password + "d&captcha=&keysTime=" + atime;
+            string param = string.Format("account={0}&password={1}&captcha={2}&keysTime={3}", txtUsername.Text, RSAEncrypt(txtPassword.Text), txtCaptcha.Text, atime);
             byte[] bs = Encoding.ASCII.GetBytes(param);
             string responseData = string.Empty;
             req.Method = "POST";
@@ -39,8 +38,7 @@ namespace Yiban
                     responseData = reader.ReadToEnd().ToString();
                 }
             }
-            MessageBox.Show(password);
-            MessageBox.Show(atime.ToString());
+            MessageBox.Show(atime);
             MessageBox.Show(responseData);
         }
         public static string RSAEncrypt(string content)
@@ -51,30 +49,6 @@ namespace Yiban
             rsa.FromXmlString(publickey);
             cipherbytes = rsa.Encrypt(Encoding.UTF8.GetBytes(content), false);
             return Convert.ToBase64String(cipherbytes);
-        }
-
-        public static string Post(string url, string content)
-        {
-            string result = "";
-            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
-            req.Method = "POST";
-            req.ContentType = "application/x-www-form-urlencoded";
-
-            byte[] data = Encoding.UTF8.GetBytes(content);
-            req.ContentLength = data.Length;
-            using (Stream reqStream = req.GetRequestStream())
-            {
-                reqStream.Write(data, 0, data.Length);
-                reqStream.Close();
-            }
-
-            HttpWebResponse resp = (HttpWebResponse)req.GetResponse();
-            Stream stream = resp.GetResponseStream();
-            using (StreamReader reader = new StreamReader(stream, Encoding.UTF8))
-            {
-                result = reader.ReadToEnd();
-            }
-            return result;
         }
     }
 }

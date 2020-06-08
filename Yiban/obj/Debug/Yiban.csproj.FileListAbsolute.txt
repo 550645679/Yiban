@@ -7,3 +7,12 @@ C:\Users\luoxi\Documents\GitHub\Yiban\Windows\Yiban\Yiban\obj\Debug\Yiban.Proper
 C:\Users\luoxi\Documents\GitHub\Yiban\Windows\Yiban\Yiban\obj\Debug\Yiban.csproj.GenerateResource.cache
 C:\Users\luoxi\Documents\GitHub\Yiban\Windows\Yiban\Yiban\obj\Debug\Yiban.exe
 C:\Users\luoxi\Documents\GitHub\Yiban\Windows\Yiban\Yiban\obj\Debug\Yiban.pdb
+C:\Users\luoxi\Documents\GitHub\Yiban\Windows\Yiban\bin\Debug\Yiban.exe.config
+C:\Users\luoxi\Documents\GitHub\Yiban\Windows\Yiban\bin\Debug\Yiban.exe
+C:\Users\luoxi\Documents\GitHub\Yiban\Windows\Yiban\bin\Debug\Yiban.pdb
+C:\Users\luoxi\Documents\GitHub\Yiban\Windows\Yiban\obj\Debug\Yiban.csprojAssemblyReference.cache
+C:\Users\luoxi\Documents\GitHub\Yiban\Windows\Yiban\obj\Debug\Yiban.MainForm.resources
+C:\Users\luoxi\Documents\GitHub\Yiban\Windows\Yiban\obj\Debug\Yiban.Properties.Resources.resources
+C:\Users\luoxi\Documents\GitHub\Yiban\Windows\Yiban\obj\Debug\Yiban.csproj.GenerateResource.cache
+C:\Users\luoxi\Documents\GitHub\Yiban\Windows\Yiban\obj\Debug\Yiban.exe
+C:\Users\luoxi\Documents\GitHub\Yiban\Windows\Yiban\obj\Debug\Yiban.pdb
